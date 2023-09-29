@@ -24,7 +24,7 @@ const productos = [
         imagen: "../images/gtx-1650.jpg",
         detalle: "Placa de Video ASUS GeForce GTX 1650 4GB GDDR6 DUAL V2 DETALLESS",
         precio: 258234.00,
-        puntuacion: "*****"
+        puntuacion: "****"
     },
     {
         codigo: 4,
@@ -51,7 +51,7 @@ const productos = [
         imagen: "../images/mother-msi.jpg",
         detalle: "Placa Madre MSI B450M-A PRO MAX DETALLES",
         precio: 87934.00,
-        puntuacion: "*****"
+        puntuacion: "****"
     },
 ]
 
@@ -66,13 +66,13 @@ localStorage.setItem('productos', productosJSON);
 const storedProductosJSON = localStorage.getItem('productos');
 const storedProductos = JSON.parse(storedProductosJSON);
 
-// Function to handle the click event when the "+" sign is clicked
+// Funcion que maneja el click del signo "+" cuando es clickeado
 function showProductDetails(productCode) {
-    // Find the selected product based on its code
+    // Busca el producto en base al codigo del mismo
     const selectedProduct = storedProductos.find(product => product.codigo === productCode);
 
     if (selectedProduct) {
-        // Encode the product name and navigate to the product-details.html page
+        // "codifica" el nombrel del producto para la url de navegacion que se va a usar en la pagina product-details.html
         const encodedProductName = encodeURIComponent(selectedProduct.producto);
         window.location.href = `product-details.html?producto=${encodedProductName}`;
     } else {
@@ -80,14 +80,14 @@ function showProductDetails(productCode) {
     }
 }
 
-// Update the creation of the product list to call the showProductDetails function with the product code
+
 const productList = document.getElementById("productList");
 
 storedProductos.forEach(product => {
     const li = document.createElement("li");
     li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
 
-    // Pass the product code to the showProductDetails function when the "+" sign is clicked
+    // Pasa el codigo para usarse con la funcion showProductDetails cuando se hace click en el signo "+"
     li.innerHTML = `
         <div class="product-description-index">
             <h4>${product.producto}</h4>

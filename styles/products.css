@@ -1,10 +1,20 @@
 .product-details-and-picture{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    justify-content: space-between;
+    gap: 8px;
 }
 
 .product-image{
     height: 300px;
     width: auto;
+}
+
+.back-icon-image{
+    height: 32px;
+    width: 32px;
+}
+
+#product-price{
+    font-weight: bold;
 }
