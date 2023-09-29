@@ -1,0 +1,10 @@
+.product-details-and-picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image{
+    height: 300px;
+    width: auto;
+}
