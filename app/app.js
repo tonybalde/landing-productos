@@ -43,15 +43,15 @@ const productList = document.getElementById("productList");
 
 storedProductos.forEach(product => {
     const li = document.createElement("li");
-    li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+    li.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center", "gap-2");
 
     // Pasa el codigo para usarse con la funcion showProductDetails cuando se hace click en el signo "+"
     li.innerHTML = `
         <div><img class="product-image-small" src="${product.imagen}">
         </div>
-        <div class="product-description-index">
+        <div class="product-description-index d-flex justify-content-start flex-column gap-2">
             <h4>${product.producto}</h4>
-            <span class="text-right">${product.descripcion}</span>
+            <span class="text-left">${product.descripcion}</span>
         </div>
         <a href="#" onclick="showProductDetails(${product.codigo})"><span class="badge bg-primary rounded-pill">+</span></a>
     `;
