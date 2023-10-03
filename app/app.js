@@ -1,4 +1,4 @@
-fetch("../data/products.json")
+fetch("./data/products.json")
   .then((response) => {
     if (response.status === 200) {
       return response.json();
