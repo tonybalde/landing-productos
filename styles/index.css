@@ -2,3 +2,21 @@
     height: 16px;
     width: 16px;
 }
+
+@media (max-width: 578px){
+ 
+    img{
+        width: 100px;
+        height: auto;
+    }
+}
+
+
+@media (min-width: 579px){
+ 
+    img{
+        width: 100px;
+        height: auto;
+    }
+
+}
